@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    max-width: 100%;
+    height: calc(100vh - 2em);
+    padding: 1em 2em;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, rgb(40, 40, 141), purple);
+}
+
+input, label, button, div {
+    font-family: sans-serif;
+}
+.input-text {
+    width: 60%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.57);
+    border: 1px solid black;
+}
+button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    transition: .2s;
+}
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 5px white;
+}
+
+.input-section {
+    max-width: 30vw;
+    min-width: 300px;
+    border-radius: 10px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: rgba(128, 128, 128, 0.522);
+    padding: 1em;
+    flex-wrap: wrap;
+    gap: 10px;
+    opacity: 0;
+    animation: fade-in 1s both;
+}
+.numer-of-todos {
+    color: white;
+}
+
+.todo-item {
+    max-width: 30%;
+    min-width: 300px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px black;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    animation: fade-in 1s both;
+}
+.todo-checkbox {
+    margin-right: 1em;
+}
+.todo-label {
+    width: 100%;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (pointer: coarse) {
+    .page {
+        align-items: center;
+    }
+}

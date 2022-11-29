@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
 
-export default function Todo( { todo }) {
+
+export default function Todo( { todo, toggleTodo }) {
+  function handleTodoClick() {
+    toggleTodo(todo.id);
+  }
   return (
-    <div>
-        <label>
-            <input type="checkbox" checked={todo.complete}/>
+    <div className='todo-item'>
+        <label className='todo-label'>
+            <input type="checkbox" checked={todo.complete} onChange={handleTodoClick} className='todo-checkboc' />
             {todo.name}
         </label>
     </div>
